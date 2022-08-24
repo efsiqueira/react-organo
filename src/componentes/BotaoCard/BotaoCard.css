@@ -1,0 +1,14 @@
+.botao-card {
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  margin: 8px 0;
+}
+
+.botao-card:hover {
+  color: #000;
+}

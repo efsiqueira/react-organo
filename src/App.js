@@ -47,8 +47,12 @@ function App() {
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador)
     setColaboradores([...colaboradores, colaborador])
+  }
+  
+  const aoColaboradorExcluido = (nome) => {
+    const newColaboradores = colaboradores.filter(colaborador => colaborador.nome !== nome)
+    setColaboradores([...newColaboradores])
   }
 
   return (
@@ -62,6 +66,7 @@ function App() {
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        aoColaboradorExcluido={aoColaboradorExcluido}
       />)}
       <Rodape />
     </div>
